@@ -12,6 +12,9 @@
 		CC53A56C1E9D81F20061CCED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC53A56A1E9D81F20061CCED /* Main.storyboard */; };
 		CC53A56E1E9D81F20061CCED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC53A56D1E9D81F20061CCED /* Assets.xcassets */; };
 		CC53A5711E9D81F20061CCED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC53A56F1E9D81F20061CCED /* LaunchScreen.storyboard */; };
+		CC53A57B1E9D84A50061CCED /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC53A5791E9D84A50061CCED /* Music.mp3 */; };
+		CC53A57C1E9D84A50061CCED /* Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC53A57A1E9D84A50061CCED /* Sound.wav */; };
+		CC53A57F1E9D85620061CCED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC53A57E1E9D85620061CCED /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		CC53A56D1E9D81F20061CCED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC53A5701E9D81F20061CCED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC53A5721E9D81F20061CCED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC53A5791E9D84A50061CCED /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
+		CC53A57A1E9D84A50061CCED /* Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound.wav; sourceTree = "<group>"; };
+		CC53A57E1E9D85620061CCED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC53A57F1E9D85620061CCED /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				CC53A5651E9D81F20061CCED /* PlayingAudio */,
 				CC53A5641E9D81F20061CCED /* Products */,
+				CC53A57D1E9D85620061CCED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +68,27 @@
 				CC53A56D1E9D81F20061CCED /* Assets.xcassets */,
 				CC53A56F1E9D81F20061CCED /* LaunchScreen.storyboard */,
 				CC53A5721E9D81F20061CCED /* Info.plist */,
+				CC53A5781E9D84A50061CCED /* Sounds */,
 			);
 			path = PlayingAudio;
+			sourceTree = "<group>";
+		};
+		CC53A5781E9D84A50061CCED /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CC53A5791E9D84A50061CCED /* Music.mp3 */,
+				CC53A57A1E9D84A50061CCED /* Sound.wav */,
+			);
+			name = Sounds;
+			path = ../Sounds;
+			sourceTree = "<group>";
+		};
+		CC53A57D1E9D85620061CCED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC53A57E1E9D85620061CCED /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +151,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC53A57B1E9D84A50061CCED /* Music.mp3 in Resources */,
 				CC53A5711E9D81F20061CCED /* LaunchScreen.storyboard in Resources */,
+				CC53A57C1E9D84A50061CCED /* Sound.wav in Resources */,
 				CC53A56E1E9D81F20061CCED /* Assets.xcassets in Resources */,
 				CC53A56C1E9D81F20061CCED /* Main.storyboard in Resources */,
 			);

@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayingAudio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,136 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4r-z5-dos">
+                                <rect key="frame" x="16" y="96" width="343" height="96"/>
+                                <color key="backgroundColor" red="0.91224093264248707" green="0.067756320159482353" blue="0.15049103992400317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="z45-JU-39Y"/>
+                                </constraints>
+                                <state key="normal" title="Play Sound Effect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSoundEffect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mPX-Im-akj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EN-vz-lf5">
+                                <rect key="frame" x="16" y="220" width="343" height="96"/>
+                                <color key="backgroundColor" red="0.21361480715469139" green="0.33125597907927595" blue="0.91224093264248707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="DFt-0h-ca8"/>
+                                </constraints>
+                                <state key="normal" title="Play Music">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvh-1i-ot2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB4-vo-6Vy">
+                                <rect key="frame" x="16" y="382" width="91" height="67"/>
+                                <color key="backgroundColor" red="0.21361480720000001" green="0.33125597909999999" blue="0.91224093260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="20I-5C-MpB"/>
+                                    <constraint firstAttribute="width" constant="91" id="qxf-1H-5EC"/>
+                                </constraints>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBI-2U-AAF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z64-vm-C7m">
+                                <rect key="frame" x="142" y="382" width="91" height="67"/>
+                                <color key="backgroundColor" red="0.21361480720000001" green="0.33125597909999999" blue="0.91224093260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="HEf-w6-nWu"/>
+                                    <constraint firstAttribute="height" constant="67" id="t68-AT-mdB"/>
+                                </constraints>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EGP-bf-bBd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rla-cX-zq5">
+                                <rect key="frame" x="268" y="382" width="91" height="67"/>
+                                <color key="backgroundColor" red="0.21361480720000001" green="0.33125597909999999" blue="0.91224093260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="4Oq-D5-sBN"/>
+                                    <constraint firstAttribute="height" constant="67" id="xhn-ge-x9h"/>
+                                </constraints>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pd3-Aa-o56"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-Uq-QPC">
+                                <rect key="frame" x="14" y="498" width="347" height="31"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.15671156350000001" blue="0.142489484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="soundEffectVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="M0Q-6Z-AlN"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vn8-BN-z35">
+                                <rect key="frame" x="14" y="536" width="347" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.21361480720000001" green="0.33125597909999999" blue="0.91224093260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="musicEffectVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="rwM-ju-M4I"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VH5-VZ-hZ2">
+                                <rect key="frame" x="14" y="574" width="347" height="31"/>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="ApplicationVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="zGv-1w-nKq"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VH5-VZ-hZ2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0Vg-ov-Ibh"/>
+                            <constraint firstItem="vB4-vo-6Vy" firstAttribute="top" secondItem="4EN-vz-lf5" secondAttribute="bottom" constant="66" id="4d2-6J-n4h"/>
+                            <constraint firstItem="z64-vm-C7m" firstAttribute="top" secondItem="4EN-vz-lf5" secondAttribute="bottom" constant="66" id="6v7-jL-6Mw"/>
+                            <constraint firstItem="d4r-z5-dos" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J3n-Gz-aGm"/>
+                            <constraint firstItem="d4r-z5-dos" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KnM-Sb-wkb"/>
+                            <constraint firstItem="vB4-vo-6Vy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PWQ-D0-UCR"/>
+                            <constraint firstItem="d4r-z5-dos" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="Sac-eu-tRL"/>
+                            <constraint firstItem="4EN-vz-lf5" firstAttribute="top" secondItem="d4r-z5-dos" secondAttribute="bottom" constant="28" id="XaQ-fn-YD4"/>
+                            <constraint firstItem="F0g-Uq-QPC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aOU-pD-Ee4"/>
+                            <constraint firstItem="4EN-vz-lf5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dVz-nz-ZFN"/>
+                            <constraint firstItem="Vn8-BN-z35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eKG-rp-xhO"/>
+                            <constraint firstItem="VH5-VZ-hZ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="itz-jl-mo6"/>
+                            <constraint firstItem="4EN-vz-lf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jiR-hX-L1J"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z64-vm-C7m" secondAttribute="bottom" constant="218" id="jqk-LY-X0s"/>
+                            <constraint firstItem="F0g-Uq-QPC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kK2-mt-dTt"/>
+                            <constraint firstItem="F0g-Uq-QPC" firstAttribute="top" secondItem="Rla-cX-zq5" secondAttribute="bottom" constant="49" id="kU2-4I-o7Y"/>
+                            <constraint firstItem="Rla-cX-zq5" firstAttribute="leading" secondItem="z64-vm-C7m" secondAttribute="trailing" constant="35" id="khu-MN-4wh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vB4-vo-6Vy" secondAttribute="bottom" constant="218" id="mxH-26-wcq"/>
+                            <constraint firstItem="Vn8-BN-z35" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="p8a-jH-e0H"/>
+                            <constraint firstItem="Vn8-BN-z35" firstAttribute="top" secondItem="F0g-Uq-QPC" secondAttribute="bottom" constant="8" id="qTb-Y7-FOO"/>
+                            <constraint firstItem="Rla-cX-zq5" firstAttribute="top" secondItem="4EN-vz-lf5" secondAttribute="bottom" constant="66" id="sik-CM-9FA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rla-cX-zq5" secondAttribute="bottom" constant="218" id="w4y-7l-eGo"/>
+                            <constraint firstItem="Rla-cX-zq5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wfb-26-of7"/>
+                            <constraint firstItem="z64-vm-C7m" firstAttribute="leading" secondItem="vB4-vo-6Vy" secondAttribute="trailing" constant="35" id="wnJ-fx-ZpO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VH5-VZ-hZ2" secondAttribute="bottom" constant="63" id="xYK-Kf-Sy1"/>
+                            <constraint firstItem="VH5-VZ-hZ2" firstAttribute="top" secondItem="Vn8-BN-z35" secondAttribute="bottom" constant="8" id="yP5-2q-Z81"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="musicVolume" destination="Vn8-BN-z35" id="bD7-YG-Syi"/>
+                        <outlet property="soundVolume" destination="F0g-Uq-QPC" id="zW0-YO-JHo"/>
+                        <outlet property="totalVolume" destination="VH5-VZ-hZ2" id="sFE-Ls-8CE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
